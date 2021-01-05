@@ -1,3 +1,4 @@
-Main title
+Running out of ideas for the title
 ---
-A very nice documentation.
+
+Expect a very nice documentation.
