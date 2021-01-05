@@ -1,6 +1,6 @@
 # Integration of `R` in `KNIME` for Anomaly Detection (impl. the `tsoutlier R` package)
 
-(Material prepared by [E.MaragKoudakis](mailto:Emmanouil.MARAGKOUDAKIS@ext.ec.europa.eu))
+(Material prepared by [E.Maragkoudakis](mailto:Emmanouil.MARAGKOUDAKIS@ext.ec.europa.eu))
 
 
 Introduction
