@@ -1,2 +1,2 @@
 # test-mkdocs
-Test documentation generation 
+Test automated documentation generation using _.github_ action. 
