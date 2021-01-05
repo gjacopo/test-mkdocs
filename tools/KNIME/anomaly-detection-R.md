@@ -1,10 +1,10 @@
 Introduction
----
+===
 
 The aim of this workflow is to demonstrate how one can use R code to perform anomaly detection, using the `tsoutliers R` package and integrate it to `KNIME`, 
 in order to help identifying outliers in a dataset and either replace them with an averaging value or remove them. 
 The data used for the task-at-hand is the *"Carbon dioxide (CO₂) emissions from the burning of fossil fuels for energy and cement production"* dataset found in 
-here: https://ourworldindata.org/grapher/co-emissions-per-capita and here: https://datamotus.com/2019-11-15-Outlier-Detection_files/co-emissions-per-capita.csv
+[here](https://ourworldindata.org/grapher/co-emissions-per-capita) and [there](https://datamotus.com/2019-11-15-Outlier-Detection_files/co-emissions-per-capita.csv).
 
 Outlier detection
 ---
@@ -32,7 +32,7 @@ Information supplemental to these help pages is given in the document that is pr
 Dataset information
 ---
 
-Human emissions of carbon dioxide and other greenhouse gases – are a primary driver of climate change – and present one of the world’s most pressing challenges. 
+Human emissions of carbon dioxide and other greenhouse gases – are a primary driver of climate change – and present one of the world's most pressing challenges. 
 This link between global temperatures and greenhouse gas concentrations – especially CO2 – has been true throughout Earth's history.
 
 To set the scene, let’s look at how the planet has warmed. In the chart we see the global average temperature relative to the average of the period between 1961
@@ -51,6 +51,47 @@ Implementation
 ---
 
 The architecture of the workflow is depicted below:
+<!-- ![workflow](imgs/image2020-12-23_13-58-51.png) -->
+<img src="imgs/image2020-12-23_13-58-51.png" alt="drawing" width="750"/>
+
+You can download the workflow from here (*TO BE ADDED*).
+
+User Story
+---
+
+The country code and the starting year is inserted by the user using a KNIME component. Data is filtered according to the preferences of the user and the 
+CO2 emission column is sent to `R` code in order for the tso function to execute, plot the anomalies and extract the indices of the outliers. 
+Since tso starts the numbering from 1 and the original data have other indices, we ask knime to create a new RowID, we uniform the row id code for 
+the original and the anomalous data and using the inner join node we extract the year that corresponds to all anomalies.
+
+**Source data:**
+<!-- ![selection](imgs/image2020-12-23_14-14-50.png) -->
+<img src="imgs/image2020-12-23_14-14-50.png" alt="drawing" width="200"/>
+
+
+**Use-selection in `KNIME` component:**
+<!-- ![selection](imgs/image2020-12-23_14-14-7.png) -->
+<img src="imgs/image2020-12-23_14-14-7.png" alt="drawing" width="500"/>
+
+**R code for outlier detection:**
+```R
+library(tsoutliers)
+rframe <- knime.in
+dat.ts<- ts(rframe,frequency=3)
+data.ts.outliers <- tso(dat.ts)
+```
+
+**Plot of the anomalies:**
+<!-- ![selection](imgs/image2020-12-23_14-12-48.png) -->
+<img src="imgs/image2020-12-23_14-12-48.png" alt="drawing" width="400"/>
+
+**Outliers list:**
+<!-- ![selection](imgs/image2020-12-23_14-16-27.png) -->
+<img src="imgs/image2020-12-23_14-16-27.png" alt="drawing" width="400"/>
+
+**Outliers joined with the initial dataset:**
+<!-- ![selection](imgs/image2020-12-23_14-17-43.png) -->
+<img src="imgs/image2020-12-23_14-17-43.png" alt="drawing" width="400"/>
 
 
 Software/data resources
