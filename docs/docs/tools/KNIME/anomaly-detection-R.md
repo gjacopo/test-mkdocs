@@ -58,7 +58,7 @@ Implementation
 
 The architecture of the workflow is depicted below:
 <!-- ![workflow](imgs/image2020-12-23_13-58-51.png) -->
-<img src="imgs/image2020-12-23_13-58-51.png" alt="drawing" width="750"/>
+<img src="../imgs/image2020-12-23_13-58-51.png" alt="drawing" width="750"/>
 
 You can download the workflow from here (*TO BE ADDED*).
 
@@ -72,13 +72,13 @@ Since `tso` starts the numbering from 1 and the original data have other indices
 row `id` code for the original and the anomalous data and using the inner join node we extract the year that corresponds to all anomalies.
 
 **Source data:**
-<!-- ![selection](imgs/image2020-12-23_14-14-50.png) -->
-<img src="imgs/image2020-12-23_14-14-50.png" alt="drawing" width="200"/>
+<!-- ![source](imgs/image2020-12-23_14-14-50.png) -->
+<img src="../imgs/image2020-12-23_14-14-50.png" alt="drawing" width="200"/>
 
 
 **Use-selection in `KNIME` component:**
 <!-- ![selection](imgs/image2020-12-23_14-14-7.png) -->
-<img src="imgs/image2020-12-23_14-14-7.png" alt="drawing" width="500"/>
+<img src="../imgs/image2020-12-23_14-14-7.png" alt="drawing" width="500"/>
 
 **R code for outlier detection:**
 ```R
@@ -89,16 +89,16 @@ data.ts.outliers <- tso(dat.ts)
 ```
 
 **Plot of the anomalies:**
-<!-- ![selection](imgs/image2020-12-23_14-12-48.png) -->
-<img src="imgs/image2020-12-23_14-12-48.png" alt="drawing" width="400"/>
+<!-- ![anomalies](imgs/image2020-12-23_14-12-48.png) -->
+<img src=../"imgs/image2020-12-23_14-12-48.png" alt="drawing" width="400"/>
 
 **Outliers list:**
-<!-- ![selection](imgs/image2020-12-23_14-16-27.png) -->
-<img src="imgs/image2020-12-23_14-16-27.png" alt="drawing" width="400"/>
+<!-- ![outliers list](imgs/image2020-12-23_14-16-27.png) -->
+<img src="../imgs/image2020-12-23_14-16-27.png" alt="drawing" width="400"/>
 
 **Outliers joined with the initial dataset:**
-<!-- ![selection](imgs/image2020-12-23_14-17-43.png) -->
-<img src="imgs/image2020-12-23_14-17-43.png" alt="drawing" width="400"/>
+<!-- ![outliers](imgs/image2020-12-23_14-17-43.png) -->
+<img src="../imgs/image2020-12-23_14-17-43.png" alt="drawing" width="400"/>
 
 
 Software/data resources
