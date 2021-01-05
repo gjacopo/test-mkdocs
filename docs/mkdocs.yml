@@ -9,7 +9,7 @@ nav:
     - About: about.md
     - Tools: 
       - KNIME:
-        tools/KNIME/anomaly-detection-R.md
+        - tools/KNIME/anomaly-detection-R.md
 #theme: 
 #  name: 'material'
 #  logo: 'https://github.com/ec-europa/digit-dataplatform/tree/master/docs/docs/img/ec_logo.jpeg'
