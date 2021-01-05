@@ -1,22 +1,27 @@
 name: Publish docs via GitHub Pages
+
 on:
   push:
     branches:
-      - main
-
+      - master
+    paths: 
+      - '**.md'
+        
 jobs:
   build:
     name: Deploy docs
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main
-        uses: actions/checkout@v1
-
-      - name: Deploy docs
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
-        # Or use mhausenblas/mkdocs-deploy-gh-pages@nomaterial to build without the mkdocs-material theme
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CUSTOM_DOMAIN: SSA
-          CONFIG_FILE: docs/mkdocs.yml
-          EXTRA_PACKAGES: build-base
+    - name: Checking out
+      uses: actions/checkout@v2
+      #with:
+      #  persist-credentials: false
+      #  fetch-depth: 0
+    - name: Deploy docs
+      uses: mhausenblas/mkdocs-deploy-gh-pages@master
+      # Or use mhausenblas/mkdocs-deploy-gh-pages@nomaterial to build without the mkdocs-material theme
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        CUSTOM_DOMAIN: SSA
+        CONFIG_FILE: docs/mkdocs.yml
+        EXTRA_PACKAGES: build-base
