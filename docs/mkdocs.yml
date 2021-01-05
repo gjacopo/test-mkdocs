@@ -1,9 +1,14 @@
 site_name: Self-service User Documentation
+site_description: 'SSA docs test'
+site_author: 'DIGIT D1'
+docs_dir: docs/docs
+repo_name: 'gjacopo/test-mkdocs'
+repo_url: 'https://github.com/gjacopo/test-mkdocs'
 nav:
     - Home: index.md
     - About: about.md
     - Tools: 
-      - KNIME
+      - KNIME:
         tools/KNIME/anomaly-detection-R.md
 #theme: 
 #  name: 'material'
