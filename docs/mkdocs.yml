@@ -1,5 +1,5 @@
 site_name: Self-service User Documentation
-site_description: 'SSA docs test'
+site_description: 'SSA test'
 site_author: 'DIGIT D1'
 docs_dir: docs
 repo_name: 'gjacopo/test-mkdocs'
