@@ -13,5 +13,5 @@ nav:
 #theme: readthedocs
 theme: 
   name: 'material'
-  logo: 'https://github.com/ec-europa/digit-dataplatform/tree/master/docs/docs/img/ec_logo.jpeg'
-  favicon: 'https://github.com/ec-europa/digit-dataplatform/tree/master/docs/docs/img/favicon.ico'
+  logo: 'https://github.com/ec-europa/digit-dataplatform/blob/master/docs/docs/img/ec_logo.jpeg'
+  favicon: 'https://github.com/ec-europa/digit-dataplatform/blob/master/docs/docs/img/favicon.ico'
