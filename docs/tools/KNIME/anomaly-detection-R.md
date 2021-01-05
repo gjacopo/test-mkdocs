@@ -3,7 +3,7 @@ Introduction
 
 (Work prepared by [E.MaragKoudakis](mailto:Emmanouil.MARAGKOUDAKIS@ext.ec.europa.eu))
 
-The aim of this workflow is to demonstrate how one can use R code to perform anomaly detection, using the `tsoutliers R` package and integrate it to `KNIME`, 
+The aim of this workflow is to demonstrate how one can use `R` code to perform anomaly detection, using the `tsoutliers R` package and integrate it to `KNIME`, 
 in order to help identifying outliers in a dataset and either replace them with an averaging value or remove them. 
 The data used for the task-at-hand is the *"Carbon dioxide (CO₂) emissions from the burning of fossil fuels for energy and cement production"* dataset found in 
 [here](https://ourworldindata.org/grapher/co-emissions-per-capita) and [there](https://datamotus.com/2019-11-15-Outlier-Detection_files/co-emissions-per-capita.csv).
@@ -15,7 +15,7 @@ Time series data often undergo sudden changes that alter the dynamics of the dat
 cannot be captured by standard time series models. That's why they are known as exogenous or outlier effects. Detecting outliers is important because they have
 an impact on the selection of the model, the estimation of parameters and, consequently, on forecasts.
 
-Following the approach described in Chen & Liu (1993), an automatic procedure for detection of outliers in time series is implemented in the package tsoutliers. 
+Following the approach described in Chen & Liu (1993) (see [references](#references), an automatic procedure for detection of outliers in time series is implemented in the package tsoutliers. 
 The procedure may in turn be run along with the automatic ARIMA model selection strategy available in the package forecast.
 
 The function `tso` is the main interface for the automatic procedure. The functions `locate.outliers.oloop` and `remove.outliers` implement respectively the first 
@@ -105,7 +105,7 @@ Software/data resources
 [manual](https://cran.r-project.org/web/packages/tsoutliers/tsoutliers.pdf).
 
 
-References
+References<a id="references"></a>
 ---
 * Chen, C. and Liu, L.-M. (1993): **Joint estimation of model parameters and outlier effects in time series**, 
 _Journal of the American Statistical Association_, 88(421):284-297, doi:[10.1080/01621459.1993.10594321](https://doi.org/10.1080/01621459.1993.10594321).
