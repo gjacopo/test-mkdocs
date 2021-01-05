@@ -1,0 +1,12 @@
+site_name: Self-service User Documentation
+nav:
+    - Home: index.md
+    - About: about.md
+    - Tools: 
+      - KNIME
+        tools/KNIME/anomaly-detection-R.md
+#theme: 
+#  name: 'material'
+#  logo: 'https://github.com/ec-europa/digit-dataplatform/tree/master/docs/docs/img/ec_logo.jpeg'
+#  favicon: 'https://github.com/ec-europa/digit-dataplatform/tree/master/docs/docs/img/favicon.ico'
+theme: readthedocs
