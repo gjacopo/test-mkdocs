@@ -1,4 +1,4 @@
-# Integration of R in KNIME for Anomaly Detection (impl. the tsoutlier R package)
+# Integration of `R` in `KNIME` for Anomaly Detection (impl. the `tsoutlier R` package)
 
 Introduction
 ===
