@@ -1,6 +1,8 @@
 Introduction
 ===
 
+(Work prepared by [E.MaragKoudakis](mailto:Emmanouil.MARAGKOUDAKIS@ext.ec.europa.eu))
+
 The aim of this workflow is to demonstrate how one can use R code to perform anomaly detection, using the `tsoutliers R` package and integrate it to `KNIME`, 
 in order to help identifying outliers in a dataset and either replace them with an averaging value or remove them. 
 The data used for the task-at-hand is the *"Carbon dioxide (CO₂) emissions from the burning of fossil fuels for energy and cement production"* dataset found in 
